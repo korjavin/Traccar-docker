@@ -6,9 +6,9 @@ RUN mkdir /usr/share/traccar/
 
 WORKDIR /usr/share/traccar/
 
-RUN wget http://freefr.dl.sourceforge.net/project/traccar/traccar-linux-64-2.10.zip
+RUN wget http://freefr.dl.sourceforge.net/project/traccar/traccar-linux-64-3.1.zip
 
-RUN unzip traccar-linux-64-2.10.zip
+RUN unzip traccar-linux-64-3.1.zip
 
 RUN ./traccar.run
 
