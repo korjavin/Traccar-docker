@@ -16,6 +16,10 @@ RUN ./traccar.run
 
 VOLUME /opt/traccar/conf
 
+#RUN mkdir /opt/traccar/logs
+
+RUN touch /opt/traccar/logs/tracker-server.log
+
 EXPOSE 8080
 
 ENTRYPOINT /opt/traccar/bin/traccar start && tail -f /opt/traccar/logs/tracker-server.log
