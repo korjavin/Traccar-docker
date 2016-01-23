@@ -1,4 +1,4 @@
-FROM java:7
+FROM java:8-jre
 
 RUN apt-get update && apt-get install -y wget git curl zip && rm -rf /var/lib/apt/lists/*
 
@@ -12,16 +12,10 @@ RUN unzip traccar-linux-64-3.3.zip
 
 RUN ./traccar.run
 
-#RUN /opt/traccar/bin/traccar start
-
 VOLUME /opt/traccar/conf
-
-#RUN mkdir /opt/traccar/logs
 
 RUN touch /opt/traccar/logs/tracker-server.log
 
-EXPOSE 8080
+EXPOSE 8082
 
 ENTRYPOINT /opt/traccar/bin/traccar start && tail -f /opt/traccar/logs/tracker-server.log
-
-
