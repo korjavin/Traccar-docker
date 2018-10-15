@@ -8,7 +8,7 @@ WORKDIR /usr/share/traccar/
 
 RUN wget https://github.com/traccar/traccar/releases/download/v4.0/traccar-linux-4.0.zip
 
-RUN unzip /traccar-linux-4.0.zip
+RUN unzip ./traccar-linux-4.0.zip
 
 RUN ./traccar.run
 
