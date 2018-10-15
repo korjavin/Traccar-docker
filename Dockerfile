@@ -18,4 +18,4 @@ RUN touch /opt/traccar/logs/tracker-server.log
 
 EXPOSE 8082
 
-ENTRYPOINT /opt/traccar/bin/traccar start && tail -f /opt/traccar/logs/tracker-server.log
+ENTRYPOINT /opt/traccar/bin/startDaemon.sh start && tail -f /opt/traccar/logs/tracker-server.log
